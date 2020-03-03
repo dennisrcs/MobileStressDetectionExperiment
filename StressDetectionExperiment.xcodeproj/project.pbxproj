@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F482F4A523F4AF77008B65A9 /* MATPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482F4A423F4AF77008B65A9 /* MATPopupViewController.swift */; };
+		F482F4A723FB2960008B65A9 /* MATs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482F4A623FB2960008B65A9 /* MATs.swift */; };
+		F482F4A923FC96B4008B65A9 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482F4A823FC96B4008B65A9 /* VideoViewController.swift */; };
 		F483FB3223E0D73200019221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483FB3123E0D73200019221 /* AppDelegate.swift */; };
 		F483FB3423E0D73200019221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483FB3323E0D73200019221 /* ViewController.swift */; };
-		F483FB3723E0D73300019221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F483FB3523E0D73300019221 /* Main.storyboard */; };
 		F483FB3923E0D73300019221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F483FB3823E0D73300019221 /* Assets.xcassets */; };
 		F483FB3C23E0D73300019221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F483FB3A23E0D73300019221 /* LaunchScreen.storyboard */; };
 		F483FB4723E0D73300019221 /* StressDetectionExperimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483FB4623E0D73300019221 /* StressDetectionExperimentTests.swift */; };
 		F483FB5223E0D73300019221 /* StressDetectionExperimentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483FB5123E0D73300019221 /* StressDetectionExperimentUITests.swift */; };
+		F4AB5B4223E0E7D60067E313 /* CWTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB5B4123E0E7D60067E313 /* CWTViewController.swift */; };
+		F4AB5B4423E219B90067E313 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB5B4323E219B90067E313 /* Utils.swift */; };
+		F4C2AAC223EA0D2F007529CF /* SelfReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2AAC123EA0D2F007529CF /* SelfReportViewController.swift */; };
+		F4C2AAC423F1F9E0007529CF /* WritingTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2AAC323F1F9E0007529CF /* WritingTaskController.swift */; };
+		F4E5430524045FAE0058D6DC /* EndExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E5430424045FAE0058D6DC /* EndExperimentViewController.swift */; };
+		F4E5430A240724070058D6DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E54308240724070058D6DC /* Main.storyboard */; };
+		F4E5430C240728440058D6DC /* SelfReportIncompleteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E5430B240728440058D6DC /* SelfReportIncompleteError.swift */; };
+		F4E5430E2409A6CD0058D6DC /* Paintings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E5430D2409A6CD0058D6DC /* Paintings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F482F4A423F4AF77008B65A9 /* MATPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MATPopupViewController.swift; sourceTree = "<group>"; };
+		F482F4A623FB2960008B65A9 /* MATs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MATs.swift; sourceTree = "<group>"; };
+		F482F4A823FC96B4008B65A9 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		F483FB2E23E0D73200019221 /* StressDetectionExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StressDetectionExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F483FB3123E0D73200019221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F483FB3323E0D73200019221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F483FB3623E0D73300019221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F483FB3823E0D73300019221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F483FB3B23E0D73300019221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F483FB3D23E0D73300019221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +59,14 @@
 		F483FB4D23E0D73300019221 /* StressDetectionExperimentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StressDetectionExperimentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F483FB5123E0D73300019221 /* StressDetectionExperimentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressDetectionExperimentUITests.swift; sourceTree = "<group>"; };
 		F483FB5323E0D73300019221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4AB5B4123E0E7D60067E313 /* CWTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWTViewController.swift; sourceTree = "<group>"; };
+		F4AB5B4323E219B90067E313 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F4C2AAC123EA0D2F007529CF /* SelfReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfReportViewController.swift; sourceTree = "<group>"; };
+		F4C2AAC323F1F9E0007529CF /* WritingTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingTaskController.swift; sourceTree = "<group>"; };
+		F4E5430424045FAE0058D6DC /* EndExperimentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndExperimentViewController.swift; sourceTree = "<group>"; };
+		F4E54309240724070058D6DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4E5430B240728440058D6DC /* SelfReportIncompleteError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfReportIncompleteError.swift; sourceTree = "<group>"; };
+		F4E5430D2409A6CD0058D6DC /* Paintings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paintings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +117,22 @@
 		F483FB3023E0D73200019221 /* StressDetectionExperiment */ = {
 			isa = PBXGroup;
 			children = (
+				F4E54308240724070058D6DC /* Main.storyboard */,
 				F483FB3123E0D73200019221 /* AppDelegate.swift */,
 				F483FB3323E0D73200019221 /* ViewController.swift */,
-				F483FB3523E0D73300019221 /* Main.storyboard */,
 				F483FB3823E0D73300019221 /* Assets.xcassets */,
 				F483FB3A23E0D73300019221 /* LaunchScreen.storyboard */,
 				F483FB3D23E0D73300019221 /* Info.plist */,
+				F4AB5B4123E0E7D60067E313 /* CWTViewController.swift */,
+				F4AB5B4323E219B90067E313 /* Utils.swift */,
+				F4C2AAC123EA0D2F007529CF /* SelfReportViewController.swift */,
+				F4C2AAC323F1F9E0007529CF /* WritingTaskController.swift */,
+				F482F4A423F4AF77008B65A9 /* MATPopupViewController.swift */,
+				F482F4A623FB2960008B65A9 /* MATs.swift */,
+				F482F4A823FC96B4008B65A9 /* VideoViewController.swift */,
+				F4E5430424045FAE0058D6DC /* EndExperimentViewController.swift */,
+				F4E5430B240728440058D6DC /* SelfReportIncompleteError.swift */,
+				F4E5430D2409A6CD0058D6DC /* Paintings.swift */,
 			);
 			path = StressDetectionExperiment;
 			sourceTree = "<group>";
@@ -194,7 +224,13 @@
 					F483FB2D23E0D73200019221 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = ZVW7934D92;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					F483FB4123E0D73300019221 = {
 						CreatedOnToolsVersion = 8.2;
@@ -235,9 +271,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E5430A240724070058D6DC /* Main.storyboard in Resources */,
 				F483FB3C23E0D73300019221 /* LaunchScreen.storyboard in Resources */,
 				F483FB3923E0D73300019221 /* Assets.xcassets in Resources */,
-				F483FB3723E0D73300019221 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +298,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C2AAC223EA0D2F007529CF /* SelfReportViewController.swift in Sources */,
+				F482F4A523F4AF77008B65A9 /* MATPopupViewController.swift in Sources */,
+				F482F4A923FC96B4008B65A9 /* VideoViewController.swift in Sources */,
+				F482F4A723FB2960008B65A9 /* MATs.swift in Sources */,
 				F483FB3423E0D73200019221 /* ViewController.swift in Sources */,
+				F4E5430524045FAE0058D6DC /* EndExperimentViewController.swift in Sources */,
+				F4E5430C240728440058D6DC /* SelfReportIncompleteError.swift in Sources */,
+				F4E5430E2409A6CD0058D6DC /* Paintings.swift in Sources */,
+				F4AB5B4223E0E7D60067E313 /* CWTViewController.swift in Sources */,
 				F483FB3223E0D73200019221 /* AppDelegate.swift in Sources */,
+				F4AB5B4423E219B90067E313 /* Utils.swift in Sources */,
+				F4C2AAC423F1F9E0007529CF /* WritingTaskController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,20 +345,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F483FB3523E0D73300019221 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F483FB3623E0D73300019221 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F483FB3A23E0D73300019221 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F483FB3B23E0D73300019221 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F4E54308240724070058D6DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4E54309240724070058D6DC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -363,6 +409,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -404,6 +451,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -413,11 +461,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = ZVW7934D92;
 				INFOPLIST_FILE = StressDetectionExperiment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.psilab.StressDetectionExperiment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,11 +477,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = ZVW7934D92;
 				INFOPLIST_FILE = StressDetectionExperiment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.psilab.StressDetectionExperiment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -512,6 +565,7 @@
 				F483FB5823E0D73400019221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F483FB5923E0D73400019221 /* Build configuration list for PBXNativeTarget "StressDetectionExperimentTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +574,7 @@
 				F483FB5B23E0D73400019221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F483FB5C23E0D73400019221 /* Build configuration list for PBXNativeTarget "StressDetectionExperimentUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +583,7 @@
 				F483FB5E23E0D73400019221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
