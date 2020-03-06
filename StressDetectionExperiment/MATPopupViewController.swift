@@ -35,7 +35,9 @@ class MATPopupViewController: UIViewController {
                 player?.prepareToPlay()
                 let audioSession = AVAudioSession.sharedInstance()
                 do {
-                    try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+                    try audioSession.setCategory(AVAudioSession.Category.playback,
+                        mode: AVAudioSession.Mode.default,
+                        options: AVAudioSession.CategoryOptions.defaultToSpeaker)
                 } catch let error {
                     print(error.localizedDescription)
                 }
@@ -63,10 +65,10 @@ class MATPopupViewController: UIViewController {
         
         currentAnswers.shuffle()
         
-        choice1Button.setTitle(currentAnswers[0], for: UIControlState.normal)
-        choice2Button.setTitle(currentAnswers[1], for: UIControlState.normal)
-        choice3Button.setTitle(currentAnswers[2], for: UIControlState.normal)
-        choice4Button.setTitle(currentAnswers[3], for: UIControlState.normal)
+        choice1Button.setTitle(currentAnswers[0], for: UIControl.State.normal)
+        choice2Button.setTitle(currentAnswers[1], for: UIControl.State.normal)
+        choice3Button.setTitle(currentAnswers[2], for: UIControl.State.normal)
+        choice4Button.setTitle(currentAnswers[3], for: UIControl.State.normal)
     }
     
     func configButtonStyle(_ button: UIButton!) {
@@ -107,4 +109,9 @@ class MATPopupViewController: UIViewController {
         onChoiceButtonClicked(sender)
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

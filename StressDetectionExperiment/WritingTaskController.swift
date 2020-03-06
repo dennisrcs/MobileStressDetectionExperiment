@@ -90,9 +90,9 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
         imageView.addGestureRecognizer(pinchGesture)
         
         // Handling keyboard move up
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillChange(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillChange(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillChange(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillChange(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillChange(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillChange(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
         if !isEasy {
             MATTimer = Timer.scheduledTimer(timeInterval: roundIntervalDuration, target:self, selector: #selector(WritingTaskController.openMATpopup), userInfo: nil, repeats: false)
@@ -106,9 +106,9 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     @objc func updateProgressBar() {
@@ -148,7 +148,7 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
         self.present(nextViewController, animated: true, completion: nil)
     }
     
-    func modalDismissed() {
+    @objc func modalDismissed() {
         let timeRemaining = taskDuration - TimeInterval(elapsedTaskTime)
         
         taskTimer = Timer.scheduledTimer(timeInterval: timeRemaining, target:self, selector: #selector(WritingTaskController.wrapupTask), userInfo: nil, repeats: false)
@@ -180,12 +180,12 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
     }
     
     @objc func keyboardWillChange(_ notification: Notification) {
-        guard let keyboardRect = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             return
         }
         
-        if notification.name == Notification.Name.UIKeyboardWillShow ||
-            notification.name == Notification.Name.UIKeyboardWillChangeFrame {
+        if notification.name == UIResponder.keyboardWillShowNotification ||
+            notification.name == UIResponder.keyboardWillChangeFrameNotification {
             view.frame.origin.y = -keyboardRect.height + 10
         } else {
             view.frame.origin.y = 0
@@ -220,8 +220,8 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func onClickSubmitText(_ sender: Any) {
-        let alert = UIAlertController(title: "Submit text?", message: "Are you sure you want to submit the text?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { action in
+        let alert = UIAlertController(title: "Submit text?", message: "Are you sure you want to submit the text?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { action in
             let text:String = self.textArea.text
             
             let key:String = "text_session\(self.sessionNumber)_\(self.easyOrHard)\(self.currentImageNumber)"
@@ -235,7 +235,7 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
             self.submitButton.isEnabled = false
         }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     

@@ -145,8 +145,8 @@ class SelfReportViewController: UIViewController {
         do {
             data = try prepareQuestionnaireData()
         } catch {
-            let alert = UIAlertController(title: "Form Incomplete", message: "Please, make sure to fill out all items before submitting", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            let alert = UIAlertController(title: "Form Incomplete", message: "Please, make sure to fill out all items before submitting", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
             return

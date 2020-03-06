@@ -62,7 +62,9 @@ class CWTViewController: UIViewController {
                 player?.prepareToPlay()
                 let audioSession = AVAudioSession.sharedInstance()
                 do {
-                    try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+                    try audioSession.setCategory(AVAudioSession.Category.playback,
+                                                 mode: AVAudioSession.Mode.default,
+                                                 options: AVAudioSession.CategoryOptions.defaultToSpeaker)
                 } catch let error {
                     print(error.localizedDescription)
                 }
@@ -278,3 +280,8 @@ class CWTViewController: UIViewController {
     }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
+}
