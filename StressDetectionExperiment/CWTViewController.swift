@@ -37,7 +37,7 @@ class CWTViewController: UIViewController {
     
     // entries
     var roundDuration = 3.0
-    var taskDuration = 20.0
+    var taskDuration = 30.0
     var isCongruent = true
     var isEasyFirst = true
     var easyOrHard = ""
@@ -50,6 +50,9 @@ class CWTViewController: UIViewController {
     var defaults = UserDefaults.standard
     
     var player: AVAudioPlayer?
+    
+    // camer recorder
+    var cameraRecorder:CameraRecorder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +75,8 @@ class CWTViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+        
+        cameraRecorder = CameraRecorder()
         
         // Loading game configs
         taskDuration = defaults.double(forKey: "taskDuration")
@@ -100,6 +105,10 @@ class CWTViewController: UIViewController {
         
         // Setting progress bar timer
         progressBarTimer = Timer.scheduledTimer(timeInterval: 0.1, target:self, selector: #selector(CWTViewController.updateProgressBar), userInfo: nil, repeats: true)
+        
+        let participandId = defaults.string(forKey: "participantId")!
+        let sessionNumber = defaults.integer(forKey: "sessionNumber")
+        cameraRecorder.startRecording("CWT_\(participandId)_\(sessionNumber)_\(easyOrHard)")
     }
     
     @objc func updateProgressBar() {
@@ -109,6 +118,8 @@ class CWTViewController: UIViewController {
         if elapsedTime >= taskDuration {
             roundTimer?.invalidate()
             progressBarTimer?.invalidate()
+            
+            cameraRecorder.stopRecording()
             
             defaults.set(round + 1, forKey: "round")
             

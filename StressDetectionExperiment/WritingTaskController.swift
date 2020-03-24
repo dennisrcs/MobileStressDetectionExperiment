@@ -27,8 +27,8 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
     var taskTimer: Timer?
     var progressBarTimer:Timer?
     
-    let roundIntervalDuration: TimeInterval = 30.0
-    let taskDuration: TimeInterval = 300.0
+    let roundIntervalDuration: TimeInterval = 20.0
+    let taskDuration: TimeInterval = 30.0
     var currentImageNumber:Int = 0
     var sessionNumber:Int = 0
     var elapsedTime:Double = 0
@@ -41,6 +41,8 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
     var end:DispatchTime?
     var elapsedTaskTime:Double = 0
     
+    var cameraRecorder: CameraRecorder!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,14 +51,9 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
                                                name: NSNotification.Name.init("modalIsDismissed"),
                                                object: nil)
         
+        cameraRecorder = CameraRecorder()
+        
         submitButton.alpha = 0.5
-        
-        // Loading text placeholders
-        let key:String = "text_session\(sessionNumber)_\(easyOrHard)"
-        
-        defaults.set("", forKey: "\(key)1")
-        defaults.set("", forKey: "\(key)2")
-        defaults.set("", forKey: "\(key)3")
         
         // Adding tap gesture to dismiss keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
@@ -68,6 +65,13 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
         
         isEasy = ((isEasyFirst && round == 2) || (!isEasyFirst && round == 4))
         easyOrHard = (isEasy) ? "easy" : "hard"
+        
+        // Loading text placeholders
+        let key:String = "text_session\(sessionNumber)_\(easyOrHard)"
+        
+        defaults.set("", forKey: "\(key)1")
+        defaults.set("", forKey: "\(key)2")
+        defaults.set("", forKey: "\(key)3")
         
         var _ = Paintings.init()
         
@@ -102,6 +106,9 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
         
         taskTimer = Timer.scheduledTimer(timeInterval: taskDuration, target:self, selector: #selector(WritingTaskController.wrapupTask), userInfo: nil, repeats: false)
         
+        let participandId = defaults.string(forKey: "participantId")!
+        cameraRecorder.startRecording("WritingTask_\(participandId)_\(sessionNumber)_\(easyOrHard)")
+        
         start = DispatchTime.now()
     }
     
@@ -135,6 +142,8 @@ class WritingTaskController: UIViewController, UITextViewDelegate {
     @objc func wrapupTask() {
         MATTimer?.invalidate()
         taskTimer?.invalidate()
+        
+        cameraRecorder.stopRecording()
         
         let text:String = self.textArea.text
         let key:String = "text_session\(self.sessionNumber)_\(self.easyOrHard)\(self.currentImageNumber)"

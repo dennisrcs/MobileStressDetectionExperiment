@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4758984242AAF73004F6B7F /* CameraRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4758983242AAF73004F6B7F /* CameraRecorder.swift */; };
 		F482F4A523F4AF77008B65A9 /* MATPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482F4A423F4AF77008B65A9 /* MATPopupViewController.swift */; };
 		F482F4A723FB2960008B65A9 /* MATs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482F4A623FB2960008B65A9 /* MATs.swift */; };
 		F482F4A923FC96B4008B65A9 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482F4A823FC96B4008B65A9 /* VideoViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4758983242AAF73004F6B7F /* CameraRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRecorder.swift; sourceTree = "<group>"; };
 		F482F4A423F4AF77008B65A9 /* MATPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MATPopupViewController.swift; sourceTree = "<group>"; };
 		F482F4A623FB2960008B65A9 /* MATs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MATs.swift; sourceTree = "<group>"; };
 		F482F4A823FC96B4008B65A9 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				F4E5430424045FAE0058D6DC /* EndExperimentViewController.swift */,
 				F4E5430B240728440058D6DC /* SelfReportIncompleteError.swift */,
 				F4E5430D2409A6CD0058D6DC /* Paintings.swift */,
+				F4758983242AAF73004F6B7F /* CameraRecorder.swift */,
 			);
 			path = StressDetectionExperiment;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				F4E5430E2409A6CD0058D6DC /* Paintings.swift in Sources */,
 				F4AB5B4223E0E7D60067E313 /* CWTViewController.swift in Sources */,
 				F483FB3223E0D73200019221 /* AppDelegate.swift in Sources */,
+				F4758984242AAF73004F6B7F /* CameraRecorder.swift in Sources */,
 				F4AB5B4423E219B90067E313 /* Utils.swift in Sources */,
 				F4C2AAC423F1F9E0007529CF /* WritingTaskController.swift in Sources */,
 			);
@@ -413,6 +417,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -455,6 +460,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
