@@ -227,7 +227,7 @@
 					F483FB2D23E0D73200019221 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = ZVW7934D92;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -238,14 +238,14 @@
 					F483FB4123E0D73300019221 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = ZVW7934D92;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F483FB2D23E0D73200019221;
 					};
 					F483FB4C23E0D73300019221 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = ZVW7934D92;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F483FB2D23E0D73200019221;
 					};
@@ -256,6 +256,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -478,7 +479,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -494,7 +495,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -509,7 +510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.psilab.StressDetectionExperimentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StressDetectionExperiment.app/StressDetectionExperiment";
 			};
 			name = Debug;
@@ -525,7 +526,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.psilab.StressDetectionExperimentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StressDetectionExperiment.app/StressDetectionExperiment";
 			};
 			name = Release;
@@ -540,7 +541,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.psilab.StressDetectionExperimentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = StressDetectionExperiment;
 			};
 			name = Debug;
@@ -555,7 +556,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.psilab.StressDetectionExperimentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = StressDetectionExperiment;
 			};
 			name = Release;
